@@ -1,0 +1,15 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+app/build/
+build/
+*.apk
+*.keystore
+# Firebase config is environment-specific and should NOT be committed.
+app/google-services.json
