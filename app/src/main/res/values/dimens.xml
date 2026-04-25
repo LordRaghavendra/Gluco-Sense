@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">20dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="section_spacing">16dp</dimen>
+    <dimen name="button_min_height">64dp</dimen>
+    <dimen name="big_button_min_height">96dp</dimen>
+    <dimen name="big_text">24sp</dimen>
+    <dimen name="huge_text">36sp</dimen>
+</resources>

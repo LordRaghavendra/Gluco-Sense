@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Brand -->
+    <color name="brand_primary">#0D5EA6</color>
+    <color name="brand_primary_dark">#074785</color>
+    <color name="brand_on_primary">#FFFFFF</color>
+    <color name="brand_secondary">#1A8F4A</color>
+
+    <!-- Surfaces -->
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_variant">#F3F6FA</color>
+    <color name="on_surface">#121212</color>
+    <color name="on_surface_muted">#555555</color>
+    <color name="divider">#DDDDDD</color>
+
+    <!-- Reading levels -->
+    <color name="level_normal">#1A8F4A</color>   <!-- green -->
+    <color name="level_high">#C0392B</color>     <!-- red -->
+    <color name="level_low">#1F4FB8</color>      <!-- blue -->
+
+    <!-- Background for alert cards -->
+    <color name="level_high_bg">#FDECEA</color>
+    <color name="level_low_bg">#E8EEFB</color>
+    <color name="level_normal_bg">#E8F5EC</color>
+</resources>
