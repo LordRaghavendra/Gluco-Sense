@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/title_home"
+            android:textAppearance="@style/TextAppearance.HealthTracker.Title"
+            android:textColor="@color/brand_primary_dark"
+            android:paddingTop="8dp"
+            android:paddingBottom="12dp" />
+
+        <!-- Latest glucose summary -->
+        <LinearLayout
+            android:id="@+id/cardLatestGlucose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="@dimen/card_padding"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_recent_glucose"
+                android:textAppearance="@style/TextAppearance.HealthTracker.Body"
+                android:textColor="@color/on_surface_muted" />
+
+            <TextView
+                android:id="@+id/txtLatestGlucose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.HealthTracker.Value"
+                android:text="—"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/txtLatestGlucoseMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.HealthTracker.Body"
+                android:textColor="@color/on_surface_muted"
+                android:text="" />
+        </LinearLayout>
+
+        <!-- Latest BP summary -->
+        <LinearLayout
+            android:id="@+id/cardLatestBp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card"
+            android:padding="@dimen/card_padding"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_recent_bp"
+                android:textAppearance="@style/TextAppearance.HealthTracker.Body"
+                android:textColor="@color/on_surface_muted" />
+
+            <TextView
+                android:id="@+id/txtLatestBp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.HealthTracker.Value"
+                android:text="—"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/txtLatestBpMeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.HealthTracker.Body"
+                android:textColor="@color/on_surface_muted"
+                android:text="" />
+        </LinearLayout>
+
+        <!-- Primary actions -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddSugar"
+            style="@style/Widget.HealthTracker.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_add_sugar"
+            app:icon="@drawable/ic_drop"
+            android:layout_marginBottom="10dp"
+            android:minHeight="@dimen/big_button_min_height"
+            android:textSize="22sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddBp"
+            style="@style/Widget.HealthTracker.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_add_bp"
+            app:icon="@drawable/ic_heart"
+            android:layout_marginBottom="10dp"
+            android:minHeight="@dimen/big_button_min_height"
+            android:textSize="22sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMedicines"
+            style="@style/Widget.HealthTracker.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_add_medicine"
+            app:icon="@drawable/ic_pill"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Secondary row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHistory"
+                style="@style/Widget.HealthTracker.Button.Tonal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/action_history"
+                app:icon="@drawable/ic_history"
+                android:layout_marginEnd="6dp"
+                android:textSize="18sp"
+                android:minHeight="@dimen/button_min_height" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalendar"
+                style="@style/Widget.HealthTracker.Button.Tonal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/action_calendar"
+                app:icon="@drawable/ic_calendar"
+                android:layout_marginStart="6dp"
+                android:textSize="18sp"
+                android:minHeight="@dimen/button_min_height" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReport"
+                style="@style/Widget.HealthTracker.Button.Tonal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/action_report"
+                app:icon="@drawable/ic_report"
+                android:layout_marginEnd="6dp"
+                android:textSize="18sp"
+                android:minHeight="@dimen/button_min_height" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSettings"
+                style="@style/Widget.HealthTracker.Button.Tonal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/action_settings"
+                app:icon="@drawable/ic_settings"
+                android:layout_marginStart="6dp"
+                android:textSize="18sp"
+                android:minHeight="@dimen/button_min_height" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmergency"
+            style="@style/Widget.HealthTracker.Button.Outlined"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_emergency"
+            app:icon="@drawable/ic_emergency"
+            android:layout_marginTop="6dp" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
